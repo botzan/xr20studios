@@ -1,0 +1,49 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+{% load static from staticfiles %}
+	<head>
+		<title> XR20 Studios </title>
+	
+	<meta name="google-site-verification" content="KPrCTIkFg3RCIWPoYvQO3QBnFcEqKflrEQI_6ztrwzE" />
+	{% block styles %}
+		<!-- lol why dis so hard.. arrangement of static, quotes, { % % }, and version|safe -->
+		<link rel='stylesheet' href="{% static "css/home.css" %}?{{ version|safe }}" type='text/css'>	 
+		<link rel='stylesheet' href="{% static "css/vimeoPopup.css" %}?{{ version|safe }}" type='text/css'>	
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,400,600,800" rel="stylesheet">
+
+		<link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/xr_favicon.png' %}" />
+
+	{% endblock %}
+
+	{% block scripts %}
+		<script src='{% static "js/jquery-1.11.0.min.js" %}'></script>
+		<script src='/static/js/home.js'|add:version|safe %}'></script>
+		<script src='/static/js/imageviewer.js'|add:version|safe ></script>
+		<script src='/static/js/vimeoPopup.js'|add:version|safe ></script>
+		<script src='/static/js/scrollcontrol.js'|add:version|safe ></script>
+	{% endblock %}
+	</head>
+
+
+<body>
+	<!-- WebGL player requires references to the static Build folder -->
+	<div style="margin:0 auto; width:512px;height:512px; background-image:url('/static/img/xr20studios_logo.png');background-repeat:no-repeat;"></div>
+	<div style="margin:0 auto; width:512px;text-align:center;">
+	Extended reality solutions for business
+	<br/> <a href='mailto:hello@xr20studios.com?subject=Hello'>Contact us </a></div>
+	
+
+<div id="imageOverlay">
+	<div class="currentImage"></div>
+</div>
+
+
+
+	<div id="vimeoPopupContainer" style="">
+		<div id="vimeoPopup" style="">
+			<iframe id="vimeo_iframe" src="https://player.vimeo.com/video/178361265" style="margin: 0 auto;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+	</div>
+
+
+</body>
