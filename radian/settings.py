@@ -1,5 +1,5 @@
 """
-Django settings for xr20studios project.
+Django settings for radian project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -25,7 +25,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'xr20studios/templates'),
+    os.path.join(BASE_DIR, 'radian/templates'),
 )
 
 STATICFILES_DIRS = [
@@ -38,7 +38,7 @@ STATICFILES_DIRS = [
 # Application definition
 
 INSTALLED_APPS = (
-	'xr20studios',
+	'radian',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,9 +57,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'xr20studios.urls'
+ROOT_URLCONF = 'radian.urls'
 
-WSGI_APPLICATION = 'xr20studios.wsgi.application'
+WSGI_APPLICATION = 'radian.wsgi.application'
 
 
 # Database

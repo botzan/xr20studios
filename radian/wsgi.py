@@ -1,5 +1,5 @@
 """
-WSGI config for xr20studios project.
+WSGI config for radian project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/
 """
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "xr20studios.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "radian.settings")
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

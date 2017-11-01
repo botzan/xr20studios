@@ -19,7 +19,7 @@ from django.contrib.auth.decorators import login_required
 
 #import requests
 
-from xr20studios.util import *
+from radian.util import *
 def simple_page(template):
 	def handler(request):
 		return renderWithNav(request, template)
